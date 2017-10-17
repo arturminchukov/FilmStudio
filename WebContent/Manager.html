@@ -85,12 +85,62 @@
         		<!-- main nav -->
         		<nav class="collapse navbar-collapse navbar-right" role="navigation">
         			<ul id="nav" class="nav navbar-nav">
-        				<li><a href="#body">Домой</a></li>
-        				<li><a href="#service">Сервис</a></li>
-        				<li><a href="#testimonials">Отзывы</a></li>
-        				<li><a href="#price">Прайс</a></li>
-        				<li><a href="#contact">Контакты</a></li>
-        				<li><a href="#" id="go">Авторизация</a></li>
+        				<li>
+        				<div class="dropdown">
+        					<button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Заказы
+        						<span class="caret"></span></button>
+        						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Все заказы</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Заказы на обработке</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Заказы за последний месяц</a></li>   
+        						</ul>
+        				</div>
+        				</li>
+        				<li>
+        				<div class="dropdown">
+        					<button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Актерский состав
+        						<span class="caret"></span></button>
+        						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Все актеры</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Добавить актера</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Удалить актера</a></li>   
+        						</ul>
+        				</div>
+        				</li>
+        				<li>
+        				<div class="dropdown">
+        					<button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Режиссеры
+        						<span class="caret"></span></button>
+        						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Все режиссеры</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Добавить режиссера</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Удалить режиссера</a></li>   
+        						</ul>
+        				</div>
+        				</li>
+        				<li>
+        				<div class="dropdown">
+        					<button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Фильмы
+        						<span class="caret"></span></button>
+        						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Все фильмы</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Добавить фильм</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Удалить фильм</a></li>   
+        						</ul>
+        				</div>
+        				</li>
+        				<li>
+        				<div class="dropdown">
+        					<button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Поиск
+        						<span class="caret"></span></button>
+        						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Поиск актера</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Поиск режиссера</a></li>
+        							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Поиск фильма</a></li>   
+        						</ul>
+        				</div>
+        				</li>
+        				<li><a href="#" id="go">Имя Фамилия Менеджера</a></li>
         			</ul>
         		</nav>
         		<!-- /main nav -->
@@ -107,12 +157,12 @@
          <main class="site-content" role="main">
             <div class="container-fluid text-center ">  
 
-                <div class="col-md-8 text-left "> 
-                  <!--Содержание страницы -->
+                <div class="col-md-10 text-left "> 
+                  
                 </div>
 
 
-                <div class="col-md-4 sidenav">
+                <div class="col-md-2 sidenav">
                     <div class="well">
                         <div>
                           <!-- Trigger the modal with a button -->
