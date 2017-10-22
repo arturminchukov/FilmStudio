@@ -446,21 +446,21 @@
         				<div id="signup">   
         					<h1 class="registration">Sign Up for Free</h1>
 
-        					<form class="registration" action="/" method="post">
+        					<form class="registration" action="registration" method="post" name="registration_form">
 
         						<div class="top-row">
         							<div class="field-wrap">
         								<label class="registration">
         									Имя<span class="req">*</span>
         								</label>
-        								<input class="registration" type="text" required autocomplete="off" />
+        								<input class="registration" name="first_name" type="text" required autocomplete="off" />
         							</div>
 
         							<div class="field-wrap">
         								<label class="registration">
         									Фамилия<span class="req">*</span>
         								</label>
-        								<input class="registration" type="text"required autocomplete="off"/>
+        								<input class="registration" name="last_name" type="text"required autocomplete="off"/>
         							</div>
         						</div>
 
@@ -468,52 +468,52 @@
         							<label class="registration">
         								Адрес эл. почты<span class="req">*</span>
         							</label class="registration">
-        							<input class="registration" type="email"required autocomplete="off"/>
+        							<input class="registration" name="email" type="email"required autocomplete="off"/>
         						</div>
 
                                 <div class="field-wrap">
                                     <label class="registration">
                                        Организация<span class="req">*</span>
                                     </label class="registration">
-                                    <input class="registration" type="text"required autocomplete="off"/>
+                                    <input class="registration"  name="company" type="text"required autocomplete="off"/>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label class="registration">
                                        Страна<span class="req">*</span>
                                     </label class="registration">
-                                    <input class="registration" type="text"required autocomplete="off"/>
+                                    <input class="registration" name="country" type="text"required autocomplete="off"/>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label class="registration">
                                        Адрес
                                     </label class="registration">
-                                    <input class="registration" type="text" autocomplete="off"/>
+                                    <input class="registration" name="address" type="text" autocomplete="off"/>
                                 </div>
 
                                 <div class="field-wrap">
                                     <label class="registration">
                                        Телефон
                                     </label class="registration">
-                                    <input class="registration" type="text" autocomplete="off"/>
+                                    <input class="registration" name="phone" type="text" autocomplete="off"/>
                                 </div>
 
         						<div class="field-wrap">
         							<label class="registration">
         								Введите пароль<span class="req">*</span>
         							</label>
-        							<input class="registration" type="password"required autocomplete="off"/>
+        							<input class="registration" name="password" type="password"required autocomplete="off"/>
         						</div>
 
                                 <div class="field-wrap">
                                     <label class="registration">
                                         Повторите пароль<span class="req">*</span>
                                     </label>
-                                    <input class="registration" type="password"required autocomplete="off"/>
+                                    <input class="registration" name="confirm_password" type="password"required autocomplete="off"/>
                                 </div>
 
-        						<button type="submit" class="button button-block"/>Sign up</button>
+        						<button type="submit" value="Submit" class="button button-block">Зарегистрироваться</button>
 
         					</form>
 
@@ -522,25 +522,25 @@
         				<div id="login">   
         					<h1 class="registration">Welcome Back!</h1>
 
-        					<form class="registration" action="/" method="post">
+        					<form class="registration" action="login" method="post">
 
         						<div class="field-wrap">
         							<label class="registration">
         								Email Address<span class="req">*</span>
         							</label>
-        							<input class="registration" type="email"required autocomplete="off"/>
+        							<input class="registration" name="email" type="email"required autocomplete="off"/>
         						</div>
 
         						<div class="field-wrap">
         							<label class="registration">
         								Password<span class="req">*</span>
         							</label>
-        							<input class="registration" type="password"required autocomplete="off"/>
+        							<input class="registration" name="password" type="password"required autocomplete="off"/>
         						</div>
 
         						<p class="registration" class="forgot"><a href="#">Forgot Password?</a></p>
 
-        						<button class="button button-block"/>Log In</button>
+        						<button class="button button-block">Log In</button>
 
         					</form>
                     </div>
@@ -581,30 +581,17 @@
 		<script src="js/main.js"></script>
 
 
-		<!-- Скрипт всплывающей формы авторизации-->
-		<script>
-			$(document).ready(function() { // вся мaгия пoсле зaгрузки стрaницы
-				$('a#go').click( function(event){ // лoвим клик пo ссылки с id="go"
-					event.preventDefault(); // выключaем стaндaртную рoль элементa
-					$('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
-					 	function(){ // пoсле выпoлнения предъидущей aнимaции
-					 		$('#modal_form') 
-								.css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
-								.animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
-							});
-				});
-				/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
-				$('#modal_close, #overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
-					$('#modal_form')
-						.animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
-							function(){ // пoсле aнимaции
-								$(this).css('display', 'none'); // делaем ему display: none;
-								$('#overlay').fadeOut(400); // скрывaем пoдлoжку
-							}
-							);
-					});
-			});
-		</script>
+<!-- Скрипт валидации данных -->
+		<!-- <script>
+		  function sendForm(e){
+			  var formData = new FormData(this);
+			  formData.append("isValid", "true");
+
+			  var xhr = new XMLHttpRequest();
+			  xhr.open("POST", "registration");
+			  xhr.send(formData);
+			}
+		</script> -->
 
 		
 	</body>

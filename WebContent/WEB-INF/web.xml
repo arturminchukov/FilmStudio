@@ -2,18 +2,18 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>FilmStudio</display-name>
   <welcome-file-list>
-    <welcome-file>Manager.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   
   
   	<servlet>
-		<servlet-name>NewActor</servlet-name>
-		<servlet-class>by.artur.filmStudio.servlets.NewActor</servlet-class>
+		<servlet-name>ClientRegistration</servlet-name>
+		<servlet-class>by.artur.filmStudio.servlets.ClientRegistration</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
-		<servlet-name>NewActor</servlet-name>
-		<url-pattern>/one</url-pattern>
+		<servlet-name>ClientRegistration</servlet-name>
+		<url-pattern>/registration</url-pattern>
 	</servlet-mapping> 
   
   

@@ -22,7 +22,7 @@ a.registration:hover {
 }
 
 .form {
-  background: rgba(19, 35, 47, 0.9);
+  background: rgb(43, 39, 39);
   padding: 40px;
   max-width: 600px;
   margin: 0px auto;
@@ -55,11 +55,11 @@ a.registration:hover {
   transition: .5s ease;
 }
 .tab-group li a:hover {
-  background: #179b77;
+  background: #fb0000;
   color: #ffffff;
 }
 .tab-group .active a {
-  background: #1ab188;
+  background: #bf1616;;
   color: #ffffff;
 }
 
@@ -93,7 +93,7 @@ label .req {
 
 label.active {
   -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+          transform: translateY(-25px);
   left: 2px;
   font-size: 14px;
 }
@@ -157,7 +157,7 @@ textarea.registration {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #1ab188;
+  background: #b12c1a;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
