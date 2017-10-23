@@ -5,17 +5,26 @@
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   
+  <servlet>
+    <servlet-name>ClientRegistration</servlet-name>
+    <servlet-class>by.artur.filmStudio.servlets.ClientRegistration</servlet-class>
+  </servlet>
   
-  	<servlet>
-		<servlet-name>ClientRegistration</servlet-name>
-		<servlet-class>by.artur.filmStudio.servlets.ClientRegistration</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>ClientRegistration</servlet-name>
-		<url-pattern>/registration</url-pattern>
-	</servlet-mapping> 
+  <servlet-mapping>
+    <servlet-name>ClientRegistration</servlet-name>
+    <url-pattern>/registration</url-pattern>
+  </servlet-mapping>
   
+  
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>by.artur.filmStudio.servlets.Login</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
   
   
 </web-app>
